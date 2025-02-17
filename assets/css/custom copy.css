@@ -1,0 +1,347 @@
+    /*--------------------------------------------------------------
+# Right Corner Header
+--------------------------------------------------------------*/
+.header-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 130px;
+    background-color: transparent !important;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    height: 100%;
+  }
+  
+  .header-right .logo img {
+    margin: 0;
+    max-height: 90px;
+    margin-right: 1px;
+    margin-left: 3rem;
+  }
+  
+  .header-right .navmenu {
+    width: 100%; /* Full width for navmenu */
+  }
+  
+  .header-right .navmenu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 1px; /* Add consistent spacing between icons */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .header-right .navmenu ul li {
+    display: flex;
+  }
+  .header-right .navmenu ul li a img {
+    height: auto;
+    display: block;
+  }
+  
+  /* tooltip container */
+  .navmenu ul li {
+    position: relative; /* Required for positioning the tooltip */
+  }
+  
+  /* Tooltip styling */
+  .navmenu ul li[data-tooltip]::after {
+    content: attr(data-tooltip); /* Tooltip text */
+    position: absolute;
+    top: 50%;
+    left: 120%; /* Position tooltip to the right of the icon */
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    z-index: 999;
+  }
+  
+  
+  
+  /* Show tooltip on hover */
+  .navmenu ul li:hover[data-tooltip]::after,
+  .navmenu ul li:hover[data-tooltip]::before {
+    opacity: 1;
+    transform: translateY(-50%) translateX(-95px); /* Add a slight slide effect */
+  }
+  
+  .main {
+    margin-right: 110px; /* Same as the width of the right-aligned header */
+    padding: 1px 20px 10px 1px; /* Optional: Add padding for spacing */
+    box-sizing: border-box; /* Ensure padding doesn't affect total width */
+  }
+
+  /* Remove unwanted padding or margin from navmenu */
+#navmenu {
+    margin: 0;
+    padding: 0;
+    width: auto; /* Ensure the width adjusts automatically */
+    height: 100vh; /* Set to take full viewport height */
+    background-color: #fff; /* Ensure background blends */
+  }
+  
+  /* Fix alignment for mobile */
+  #navmenu ul {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Ensure no extra space for nav items */
+  #navmenu ul li {
+    margin: 0;
+    padding: 2px 0; /* Adjust spacing between items */
+  }
+
+  /* Mobile-specific styling */
+@media (max-width: 768px) {
+    #navmenu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 60px; /* Adjust width for mobile */
+      height: 100vh; /* Full height for mobile */
+      overflow-y: auto; /* Allow scrolling if needed */
+    }
+  
+    #navmenu ul {
+      flex-direction: column; /* Stack items vertically */
+      justify-content: flex-start;
+    }
+  }
+
+  header, #navmenu {
+    margin: 0;
+    padding: 0;
+  }
+#navmenu.active {
+  display: block;
+  transform: translateX(0); /* Ensure it stays visible */
+}
+  
+  @media (max-width: 768px) {
+    .header-right {
+      min-width: 130px; 
+    }
+  
+    .main {
+      margin-right: 110px; /* Match the header width */
+    }
+  }
+  @media (max-width: 758px) {
+    .header-right {
+      min-width: 130px; 
+    }
+  
+    .main {
+      margin-right: 110px; /* Match the header width */
+    }
+  }
+  @media (max-width: 688px) {
+    .header-right {
+      min-width: 130px; 
+    }
+  
+    .main {
+      margin-right: 110px; /* Match the header width */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-right {
+      position: absolute; /* Optional: Change behavior for very small screens */
+      width: 100%; /* Header spans the full width */
+      height: auto;
+      bottom: 0;
+    }
+  
+    .main {
+      margin-right: 0; /* Remove margin */
+    }
+  }
+  
+  
+        /* .modal {
+      z-index: 1050; 
+  } */
+      .search-input {
+        position: relative;
+      }
+  
+      .search-input input {
+        /* padding-left: 2.5rem;  */
+        padding: 0.8rem 1rem 0.8rem 1rem;
+        background-color: transparent;
+        border: 2px solid #2e5a31;
+      }
+      input::placeholder {
+        color: black !important;
+        opacity: 1; /* Ensures the placeholder is fully visible */
+      }
+  
+      .search-input .fa-search {
+        position: absolute;
+        left: 10px;  /* Position the icon on the left */
+        top: 50%;
+        transform: translateY(-50%);
+        color: black;
+      }
+      .corner-image {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      width: 150px;  
+      height: auto;
+      margin: 3rem 5rem;  /* Add some margin if you want space from the edges */
+      cursor: pointer;
+  }
+      .corner-image-gif {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      /* width: 300px;  */
+      width: 13rem; 
+      height: auto;
+      margin: 0.5rem 6rem;  /* Add some margin if you want space from the edges */
+      cursor: pointer;
+      z-index: 999; /* Ensure it stays in front of other elements */
+  
+  }
+  /* Hidden chat popup window */
+  .chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 10px;
+      width: 500px;
+      height: auto; /* Adjust height dynamically */
+      max-height: 80%; /* Prevent overflow beyond screen */
+      border: 1px solid #ccc;
+      background-color: white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column; /* Layout handling */
+      overflow: hidden;
+  }
+  
+  .chat-header {
+      background-color: #2e5a31;
+      color: white;
+      padding: 10px;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .chat-body {
+      padding: 10px;
+      overflow-y: auto; /* Scrollable for large content */
+      max-height: 500px; /* Adjust as needed */
+      min-height: 300px; /* Adjust as needed */
+  }
+  
+  .chat-footer {
+      padding: 10px 15px;
+      border-top: 1px solid #ccc;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 10px; /* Add space between elements */
+  }
+  
+  .chat-footer input {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
+  }
+  
+  .chat-footer button {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #2e5a31;
+      color: white;
+      cursor: pointer;
+      width: 100%;
+  }
+  
+  .chat-footer button:hover {
+      background-color: #213923;
+  }
+  
+  #questionList {
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 0;
+      width: 100%;
+      z-index: 1050;
+      max-height: 500px;
+      overflow-y: auto;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      display: none; /* Initially hidden */
+  }
+  
+  #questionList .list-group-item {
+      cursor: pointer;
+      padding: 10px;
+  }
+  
+  #questionList .list-group-item:hover {
+      background-color: #f8f9fa;
+  }
+  
+  textarea {
+      flex-grow: 1;
+      margin-top: 10px;
+      padding: 10px;
+      resize: none;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+  
+  textarea:focus {
+      outline: none;
+      border-color: #0078FF;
+  }
+  .navi {
+    background-color: #2e5a31; 
+    width: 65%; 
+    margin: 0 auto; 
+    border-radius: 45px; 
+    padding: 1rem;
+  }
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .card-body {
+    background: #f8f9fa; /* Light gray background */
+  }
+  .card:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  .card:nth-child(even) .card-body {
+    background: #e9ecef; /* Slightly darker gray */
+  }

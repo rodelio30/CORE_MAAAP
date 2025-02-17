@@ -1,0 +1,573 @@
+    /*--------------------------------------------------------------
+# Right Corner Header
+--------------------------------------------------------------*/
+.header-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 130px;
+    background-color: transparent !important;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    height: 100%;
+  }
+  
+  .header-right .logo img {
+    margin: 0;
+    max-height: 90px;
+    margin-right: 1px;
+    margin-left: 3rem;
+  }
+  
+  .header-right .navmenu {
+    width: 100%; /* Full width for navmenu */
+  }
+  
+  .header-right .navmenu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 1px; /* Add consistent spacing between icons */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .header-right .navmenu ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-right .navmenu ul li a img {
+    height: auto;
+    display: block;
+  }
+
+
+  
+  /* tooltip container */
+  .navmenu ul li {
+    position: relative; /* Required for positioning the tooltip */
+  }
+  
+  /* Tooltip styling */
+  .navmenu ul li[data-tooltip]::after {
+    content: attr(data-tooltip); /* Tooltip text */
+    position: absolute;
+    top: 50%;
+    left: 120%; /* Position tooltip to the right of the icon */
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    z-index: 999;
+  }
+  
+  
+  
+  /* Show tooltip on hover */
+  .navmenu ul li:hover[data-tooltip]::after,
+  .navmenu ul li:hover[data-tooltip]::before {
+    opacity: 1;
+    transform: translateY(-50%) translateX(-95px); /* Add a slight slide effect */
+  }
+  
+  .main {
+    margin-right: 130px; /* Same as the width of the right-aligned header */
+    padding: 1px 20px 10px 1px; /* Optional: Add padding for spacing */
+    box-sizing: border-box; /* Ensure padding doesn't affect total width */
+  }
+
+  /* Remove unwanted padding or margin from navmenu */
+  #navmenu {
+    margin: 0;
+    padding: 10px 0;
+    width: auto;
+    height: 100vh; /* Full viewport height */
+    background-color: #ffffff;
+    border-left: 2px solid #ddd; /* Subtle border for a modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    justify-content: center;
+  }
+  
+  #navmenu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  
+  
+  #navmenu ul li {
+    margin: 8px 0; 
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth animations */
+    border-radius: 10px; 
+    border: 4px solid rgb(238, 237, 237);
+    box-shadow: 0 9px 15px rgba(0, 0, 0, 0.15); /* Hover shadow effect */
+  }
+
+  #navmenu ul li:last-child{
+    border: 0px;
+    box-shadow: none; 
+  } 
+
+  
+  #navmenu ul li:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Hover shadow effect */
+  }
+
+  #navmenu ul li:hover:last-child{
+    transform: none; /* Scale effect on hover */
+    box-shadow: none; /* Hover shadow effect */
+  } 
+  
+  
+  #navmenu ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  #navmenu ul li img {
+    display: block;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Extra depth on hover */
+    border-radius: 10px; 
+    padding: 3px;
+    transition: background 0.3s, box-shadow 0.3s; /* Smooth hover animation */
+  }
+
+  #navmenu ul li:last-child img {
+    border-radius: 0; 
+    box-shadow: none; 
+    transition: none;
+    border: 0px;
+  } 
+  
+  
+  #navmenu ul li img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Extra depth on hover */
+  }
+
+  #navmenu ul li img:hover:last-child {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Extra depth on hover */
+  }
+
+    tbody th,h5,h4,h6 {
+      font-weight: 400;
+    }
+
+  /* Mobile-specific styling */
+@media (max-width: 768px) {
+    #navmenu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 60px; /* Adjust width for mobile */
+      height: 100vh; /* Full height for mobile */
+      overflow-y: auto; /* Allow scrolling if needed */
+    }
+  
+    #navmenu ul {
+      flex-direction: column; /* Stack items vertically */
+      justify-content: flex-start;
+    }
+  }
+
+  header, #navmenu {
+    margin: 0;
+    padding: 0;
+  }
+#navmenu.active {
+  display: block;
+  transform: translateX(0); /* Ensure it stays visible */
+}
+  
+  @media (max-width: 768px) {
+    .header-right {
+      min-width: 130px; 
+    }
+  
+    .main {
+      margin-right: 110px; /* Match the header width */
+    }
+  }
+  @media (max-width: 758px) {
+    .header-right {
+      min-width: 130px; 
+    }
+  
+    .main {
+      margin-right: 110px; /* Match the header width */
+    }
+  }
+  @media (max-width: 688px) {
+    .header-right {
+      min-width: 130px; 
+    }
+  
+    .main {
+      margin-right: 110px; /* Match the header width */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-right {
+      position: absolute; /* Optional: Change behavior for very small screens */
+      width: 100%; /* Header spans the full width */
+      height: auto;
+      bottom: 0;
+    }
+  
+    .main {
+      margin-right: 0; /* Remove margin */
+    }
+  }
+  
+
+
+        /* .modal {
+      z-index: 1050; 
+  } */
+      .search-input {
+        position: relative;
+      }
+  
+      .search-input input {
+        /* padding-left: 2.5rem;  */
+        padding: 0.8rem 1rem 0.8rem 1rem;
+        background-color: transparent;
+        border: 2px solid #2e5a31;
+        width: 600px;
+      }
+      input::placeholder {
+        color: black !important;
+        opacity: 1; /* Ensures the placeholder is fully visible */
+      }
+  
+      .search-input .fa-search {
+        position: absolute;
+        left: 10px;  /* Position the icon on the left */
+        top: 50%;
+        transform: translateY(-50%);
+        color: black;
+      }
+      .corner-image {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      width: 150px;  
+      height: auto;
+      margin: 3rem 5rem;  /* Add some margin if you want space from the edges */
+      cursor: pointer;
+  }
+      /* .corner-image-gif {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      width: 13rem; 
+      height: auto;
+      margin: 0.5rem 6rem;  
+      cursor: pointer;
+      z-index: 999;
+  } */
+      .corner-image-gif {
+      /* position: fixed; */
+      right: 0;
+      bottom: 0;
+      /* width: 300px;  */
+      width: 9rem; 
+      height: auto;
+      cursor: pointer;
+      z-index: 999; /* Ensure it stays in front of other elements */
+  
+  }
+  /* Hidden chat popup window */
+  .chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 10px;
+      width: 500px;
+      height: auto; /* Adjust height dynamically */
+      max-height: 80%; /* Prevent overflow beyond screen */
+      border: 1px solid #ccc;
+      background-color: white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column; /* Layout handling */
+      overflow: hidden;
+  }
+  
+  .chat-header {
+      background-color: #2e5a31;
+      color: white;
+      padding: 10px;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  /* .chat-body {
+      padding: 10px;
+      overflow-y: auto; 
+      max-height: 500px; 
+      min-height: 300px; 
+  }
+  
+  .chat-footer {
+      padding: 10px 15px;
+      border-top: 1px solid #ccc;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 10px; 
+  }
+  
+  .chat-footer input {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
+  }
+  
+  .chat-footer button {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #2e5a31;
+      color: white;
+      cursor: pointer;
+      width: 100%;
+  }
+  
+  .chat-footer button:hover {
+      background-color: #213923;
+  }
+  
+  #questionList {
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 0;
+      width: 100%;
+      z-index: 1050;
+      max-height: 500px;
+      overflow-y: auto;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      display: none; 
+  }
+  
+  #questionList .list-group-item {
+      cursor: pointer;
+      padding: 10px;
+  }
+  
+  #questionList .list-group-item:hover {
+      background-color: #f8f9fa;
+  } */
+
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 63vh;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.chat-message {
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+    position: relative;
+    font-size: 12px;
+}
+
+.user-message {
+    /* background-color: #0078FF; */
+    /* color: white; */
+    background-color: #eceef1;
+    color: #333;
+    margin-left: auto;
+    text-align: right;
+}
+
+.user-message p {
+  margin-bottom: 0;
+}
+.bot-message p {
+  margin-bottom: 0;
+}
+
+.bot-message {
+    background-color: #e2e3e5;
+    color: #333;
+    text-align: left;
+}
+
+.timestamp {
+    display: block;
+    font-size: 10px;
+    margin-top: 1px;
+    /* color: #e3e1e1; */
+    color: #333;
+}
+
+.suggestion {
+    /* background-color: #00BFFF;
+    color: white; */
+    background-color: #e2e3e5;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.suggestion:hover {
+    /* background-color: #0078FF; */
+    background-color: #eceef1;
+}
+
+.typing {
+    font-style: italic;
+    color: #666;
+}
+
+.chat-footer {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+.welcome-message {
+  /* margin: 1rem; */
+  padding: 0.5rem;
+  width: 80%;
+  /* margin: 0; */
+  background-color: #ffffff;
+  font-size: 12px;
+  border-radius: 0.5rem;
+}
+  
+  textarea {
+      flex-grow: 1;
+      margin-top: 10px;
+      padding: 10px;
+      resize: none;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+  
+  textarea:focus {
+      outline: none;
+      border-color: #0078FF;
+  }
+  .navi {
+    background-color: #2e5a31; 
+    width: 65%; 
+    margin: 0 auto; 
+    border-radius: 45px; 
+    padding: 1rem;
+  }
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .card-body {
+    background: #f8f9fa; /* Light gray background */
+  }
+  .card:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  .card:nth-child(even) .card-body {
+    background: #e9ecef; /* Slightly darker gray */
+  }
+
+
+
+
+.feedback-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.feedback-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.feedback-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 1px;
+  color: #333;
+}
+
+.feedback-card .stars {
+  margin-bottom: 1px;
+}
+
+.feedback-card .star {
+  color: #f4d03f;
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+
+.feedback-card .star.empty {
+  color: #ddd;
+}
+
+.feedback-card .message {
+  font-size: 1em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.feedback-card .date {
+  font-size: 0.9em;
+  color: #666;
+}
