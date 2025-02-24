@@ -1,1 +1,3 @@
 DirectoryIndex explore.php
+
+AddType model/gltf-binary .glb

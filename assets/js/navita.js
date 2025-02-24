@@ -105,6 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+
+
         // Send the question to the server to check if there's an existing answer
         fetch('fetch_answer.php?q=' + encodeURIComponent(question))
             .then(response => response.json())
@@ -144,7 +146,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const chatContainer = document.getElementById('chatContainer');
         const bubble = document.createElement('div');
         bubble.className = `chat-message ${sender}-message`;
-        bubble.innerHTML = `<p>${message}</p><span class="timestamp">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>`;
+        // bubble.innerHTML = `<pre>${message}</pre><span class="timestamp">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>`;
+        // Check if message length is greater than 100 characters
+        if (message.length > 100) {
+            bubble.innerHTML = `<pre>${message}</pre><span class="timestamp">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>`;
+        } else {
+            bubble.innerHTML = `<p>${message}</p><span class="timestamp">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>`;
+        }
         chatContainer.appendChild(bubble);
         chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to bottom
     }
@@ -166,4 +174,5 @@ document.addEventListener('DOMContentLoaded', () => {
             typingIndicator.remove();
         }
     }
+
 });

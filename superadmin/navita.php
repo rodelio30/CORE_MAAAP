@@ -139,6 +139,7 @@ if (isset($_GET['reject_id'])) {
       margin: 0; 
       border: 5px solid #2e5a31; 
       border-bottom: 0px; 
+      background-color: white;
     }
   </style>
 </head>
@@ -161,7 +162,8 @@ if (isset($_GET['reject_id'])) {
       </h1>
     </div>
     <!-- Explore Section -->
-    <section class="services section light-background">
+    <!-- <section class="services section light-background"> -->
+    <section class="about section new-bg">
       <!-- Section Title -->
       <div class="container" data-aos="fade-up">
       <div class="row pt-3">
@@ -171,9 +173,9 @@ if (isset($_GET['reject_id'])) {
         </button>
       </div>
       <div class="col-md-4 text-center">
-        <h1>
+        <h1 style="color: white;">
           <b>
-            NAVITA
+            NAVITA SETTING
           </b>
         </h1>
       </div>

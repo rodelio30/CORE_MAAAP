@@ -1,6 +1,5 @@
-
   <header id="header" class="header header-right">
-    <nav id="navmenu" class="navmenu pt-4">
+    <nav id="navmenu" class="navmenu pt-0">
       <ul>
         <!-- <li>
             <img src="assets/img/core/coreguide-logo.png" alt="Core Guide Logo" width="75">
@@ -25,7 +24,6 @@
           <img src="assets/img/icon/login.png"  alt="Core Guide Logo Login" width="70">
         </a></li>
 
-        <br> <br>
         <li>
           <img src="assets/img/icon/navita-v2.gif" alt="Chat Icon" id="chatIcon" width="150" class="corner-image-gif">
         </li>

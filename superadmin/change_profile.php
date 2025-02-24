@@ -153,9 +153,10 @@ if (empty($_SESSION['user_id'])) {
       </h1>
     </div>
     <!-- Explore Section -->
-    <section class="services section">
+    <!-- <section class="services section"> -->
+    <section class="section new-bg">
       <!-- Section Title -->
-      <div class="container pt-2 d-flex justify-content-center align-items-center">
+      <div class="container pt-2 d-flex justify-content-center align-items-center" style="height: 95vh;">
       <div class="login-container text-center">
       <h1>CHANGE PROFILE</h1>
       <hr class="hr-change-pass">

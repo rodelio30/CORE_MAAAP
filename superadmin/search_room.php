@@ -36,6 +36,9 @@ if (!empty($_POST['search']) && preg_match('/[a-zA-Z]/', $_POST['search'])) {
 
     $query .= " GROUP BY e.name";  
 }
+else {
+    $query .= " GROUP BY r.room_name";  
+}
 
 // Bind parameters to the prepared statement
 $stmt->bind_param('ssss', $searchWildcard, $searchWildcard, $searchWildcard, $searchWildcard);

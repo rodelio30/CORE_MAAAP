@@ -29,12 +29,16 @@ WHERE
     r.description LIKE ? OR 
     r.other_description LIKE ? OR
     e.name LIKE ?";
+
 // Check if search term is not empty and contains valid characters
 if (!empty($_POST['search']) && preg_match('/[a-zA-Z]/', $_POST['search'])) {
     $searchTerm = trim($_POST['search']); // Remove leading/trailing white spaces
     $searchTerm = preg_replace('/\s+/', ' ', $searchTerm); // Normalize multiple spaces into one
 
     $query .= " GROUP BY e.name";  
+} 
+else {
+    $query .= " GROUP BY r.room_name";  
 }
 
 $stmt = $conn->prepare($query);
@@ -53,7 +57,7 @@ $stmt->bind_param('ssss', $searchWildcard, $searchWildcard, $searchWildcard, $se
             if (!empty($row['room_name']) && stripos($row['room_name'], $searchTerm) !== false) {
                 echo '<li class="list-group-item">';
                 echo '<a href="#" class="room-link" data-room-id="' . $row['room_id'] . '" style="text-decoration: none; color: black; display: flex; align-items: center;">';
-                echo '<div>';
+                echo '<div class="mt-3">';
                 echo '<span><i class="bi bi-door-open"></i> Room: ' . htmlspecialchars($row['room_name']) . '</span><br>';
                 echo '<p><i class="bi bi-building"></i> Building: ' . htmlspecialchars($row['description']) . '</p>';
                 echo '</div>';

@@ -197,7 +197,8 @@ if (isset($_POST['delete_selected'])) {
       </h1>
     </div>
     <!-- Explore Section -->
-    <section class="services section light-background">
+    <!-- <section class="services section light-background"> -->
+    <section id="feedback" class="contact section new-bg">
       <!-- Section Title -->
       <div class="container" data-aos="fade-up">
       <div class="row pt-3">
@@ -205,9 +206,9 @@ if (isset($_POST['delete_selected'])) {
       </div>
         <div class="col-md-4 text-center">
           <?php if (!empty($feedbacks)) : ?>
-            <h1> <b> FEEDBACK </b> </h1>
+            <h1 style="color: white;"> <b> FEEDBACK </b> </h1>
           <?php elseif (empty($feedbacks)) : ?>
-            <h1> <b> NO FEEDBACK </b> </h1>
+            <h1 style="color: white;"> <b> NO FEEDBACK </b> </h1>
           <?php endif; ?>
       </div>
       <div class="col-md-4">
@@ -224,7 +225,7 @@ if (isset($_POST['delete_selected'])) {
     <?php if (!empty($feedbacks)) : ?>
       <div class="select-all-container">
         <input type="checkbox" id="select-all" class="select-all-checkbox">
-        <label for="select-all">Select All</label>
+        <label for="select-all" style="color: white;">Select All</label>
       </div>
       <?php endif; ?>
   <div class="feedback-list">

@@ -167,9 +167,9 @@ if (isset($_POST["delete_user"])) {
       </h1>
     </div>
     <!-- Explore Section -->
-    <section class="services section light-background">
+    <section  class="about section new-bg">
       <!-- Section Title -->
-      <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up" style="min-height: 90vh;">
         <div class="row pt-3">
             <div class="col-md-4">
                 <?php if($user_type == 'Superadmin') { ?>
@@ -179,7 +179,7 @@ if (isset($_POST["delete_user"])) {
                 <?php } ?>
             </div>
             <div class="col-md-4 text-center">
-                <h1>
+                <h1 style="color: white;">
                   <b>
                   ACCOUNTS
                   </b>

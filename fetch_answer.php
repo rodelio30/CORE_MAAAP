@@ -16,7 +16,7 @@ if (!empty($q)) {
     while ($row = $result->fetch_assoc()) {
         $questions[] = [
             'question' => $row['question'],
-            'answer' => $row['answer']
+            'answer' => htmlspecialchars($row["answer"])
         ];
     }
     echo json_encode($questions);

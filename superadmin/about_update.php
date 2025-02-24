@@ -12,21 +12,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $value = $data['value'];
 
     // Validate field name to prevent SQL injection
-    $validFields = ['about_description', 'core_description'];
+    // $validFields = ['about_description', 'core_description'];
+    // $validFields = ['about_description', 'core_description', 'about_title', 'core_title'];
+    $validFields = ['about_description', 'core_description', 'about_title', 'core_title', 'subtitle'];
     if (!in_array($field, $validFields)) {
         echo json_encode(['success' => false, 'message' => 'Invalid field']);
         exit;
     }
 
-    // Determine the table based on the field name
-    if ($field === 'about_description') {
-        $query = "UPDATE about_sections SET about_description = ? WHERE about_id = ?";
-    } elseif ($field === 'core_description') {
-        $query = "UPDATE core_values SET core_description = ? WHERE core_id = ?";
+    if ($field === 'about_description' || $field === 'about_title') {
+        $query = "UPDATE about_sections SET $field = ? WHERE about_id = ?";
+    } elseif ($field === 'core_description' || $field === 'subtitle' || $field === 'core_title') {
+        $query = "UPDATE core_values SET $field = ? WHERE core_id = ?";
     } else {
         echo json_encode(['success' => false, 'message' => 'Invalid update operation']);
         exit;
     }
+    // Determine the table based on the field name
+    // if ($field === 'about_description') {
+    //     $query = "UPDATE about_sections SET about_description = ? WHERE about_id = ?";
+    // } elseif ($field === 'core_description') {
+    //     $query = "UPDATE core_values SET core_description = ? WHERE core_id = ?";
+    // } else {
+    //     echo json_encode(['success' => false, 'message' => 'Invalid update operation']);
+    //     exit;
+    // }
 
     // Execute the update
     $stmt = $conn->prepare($query);

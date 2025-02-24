@@ -12,11 +12,11 @@ $stmt->fetch();
 $stmt->close();
 
 // If profile_pic is empty, use a default image
-$profile_pic = empty($profile_pic) ? '../img/user.png' : 'profiles/' . $profile_pic;
+$profile_pic = empty($profile_pic) ? '../assets/img/user.png' : 'profiles/' . $profile_pic;
 ?>
  
-  <header id="header" class="header header-right">
-    <nav id="navmenu" class="navmenu pt-4">
+  <header id="header" class="header header-right admin-image">
+    <nav id="navmenu" class="navmenu pt-1">
       <ul>
 
           <!-- Profile -->
@@ -87,7 +87,7 @@ $profile_pic = empty($profile_pic) ? '../img/user.png' : 'profiles/' . $profile_
               <li></li>
             </ul>
           </li>
-        <li data-tooltip="Navita"><a href="navita.php">
+        <li data-tooltip="Navita Setting"><a href="navita.php">
           <img src="../assets/img/icon/navita.png"  alt="Core Guide Logo" width="50">
         </a></li>
         <!-- <li data-tooltip="Explore"><a href="explore.php">
@@ -149,7 +149,7 @@ $profile_pic = empty($profile_pic) ? '../img/user.png' : 'profiles/' . $profile_
         </form>
     </div>
     </div> -->
-    <div class="chat-popup" id="chatPopup">
+    <div class="chat-popup" id="chatPopup" style="display: none;">
         <div class="chat-header">
           <img src="../assets/img/core/coreguide-logo.png" alt="Core Guide Logo" width="40" style="background-color: white;">
             <h3 class="m-2" style="color: white;">Navita</h3>

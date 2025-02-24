@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
       width: 95%;
       max-width: 750px; /* Adjusted form width */
-      height: 90%;
+      max-height: 90%;
       max-height: 500px;
     }
 
@@ -159,9 +159,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </h1>
     </div>
     <!-- Explore Section -->
-    <section class="services section">
+    <!-- <section class="services section"> -->
+    <section class="section new-bg">
       <!-- Section Title -->
-      <div class="container d-flex justify-content-center align-items-center">
+      <div class="container d-flex justify-content-center align-items-center" style="height: 95vh;">
 
       <div class="login-container text-center">
       <h1>

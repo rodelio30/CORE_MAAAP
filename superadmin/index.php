@@ -81,11 +81,11 @@ if (isset($_POST["submit_navita"])) {
     </div>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+    <section id="hero" class="section new-bg">
 
       <!-- <img src="../assets/img/hero-bg.jpg" alt="" data-aos="fade-in"> -->
 
-      <div class="container">
+      <div class="container" style="height: 90vh;">
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center align-items-center">
             <form>

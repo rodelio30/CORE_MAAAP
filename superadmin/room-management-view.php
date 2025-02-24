@@ -113,6 +113,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     th {
       border: 5px solid #2e5a31 !important;
     }
+    form label {
+      color: white;
+    }
   </style>
 
 </head>
@@ -135,16 +138,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </h1>
     </div>
     <!-- Explore Section -->
-    <section class="services section light-background">
+    <!-- <section class="services section light-background"> -->
+    <section  class="about section new-bg">
       <!-- Section Title -->
       <div class="container">
       <!-- Button trigger modal -->
     <div class="row pt-3">
         <div class="col-md-4">
-              <a href="room-management.php" class="btn btn-outline-success">< Back</a>
+              <a href="room-management.php" class="btn btn-outline-success" style="color: white;">< Back</a>
         </div>
         <div class="col-md-4 text-left">
-            <h1 class="text-center"><b>ROOM DETAILS</b></h1>
+            <h1 class="text-center" style="color: white;"><b>ROOM DETAILS</b></h1>
         </div>
         <div class="col-md-4">
         </div>

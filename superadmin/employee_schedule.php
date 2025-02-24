@@ -299,7 +299,8 @@ if ($result) {
       </h1>
     </div>
     <!-- Explore Section -->
-    <section class="services section light-background">
+    <!-- <section class="services section light-background"> -->
+    <section  class="about section new-bg">
       <!-- Section Title -->
       <div class="container" data-aos="fade-up">
         <!-- Button trigger modal -->
@@ -310,7 +311,7 @@ if ($result) {
             </button>
         </div>
         <div class="col-md-5 text-left">
-            <h1>
+            <h1 style="color: white;">
               <b>
               TEACHER SCHEDULE
               </b>
@@ -340,7 +341,7 @@ if ($result) {
         <tbody>
         <?php
 $query = "
-SELECT e.employee_id, e.name, e.department, e.position, GROUP_CONCAT(DISTINCT CONCAT('Room: ', rm.room_name, ' (', r.day, ')', IF(r.subject IS NOT NULL AND r.subject <> '', CONCAT(' Subject: ', r.subject), ''), IF(r.position = 'non-teaching', CONCAT(' Time In: ', r.time_in, ' Time Out: ', r.time_out), CONCAT(' Time In: ', r.time_in))) SEPARATOR ', ') AS schedules FROM employee_schedule e LEFT JOIN real_time_schedule r ON e.employee_id = r.employee_id LEFT JOIN room rm ON r.room_id = rm.room_id GROUP BY e.employee_id ORDER BY e.employee_id ASC;
+SELECT e.employee_id, e.name, e.department, e.position, GROUP_CONCAT(DISTINCT CONCAT('Room: ', rm.room_name, ' (', r.day, ')', IF(r.subject IS NOT NULL AND r.subject <> '', CONCAT(' Subject: ', r.subject), ''), IF(r.position = 'non-teaching', CONCAT(' Time In: ', r.time_in, ' Time Out: ', r.time_out), CONCAT(' Time In: ', r.time_in))) SEPARATOR ', ') AS schedules FROM employee_schedule e LEFT JOIN real_time_schedule r ON e.employee_id = r.employee_id LEFT JOIN room rm ON r.room_id = rm.room_id GROUP BY e.employee_id ORDER BY e.employee_id DESC;
     ";
 
 $result = mysqli_query($conn, $query);
@@ -365,7 +366,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#{$modal_id}'>
                     View 
                 </button>
-                <a href='include/delete_employee.php?emp_id={$row['employee_id']}' class='btn btn-danger'>Delete</a>
+                <a href='include/delete_employee.php?emp_id={$row['employee_id']}' onclick='return confirm(\"Are you sure you want to delete this Employee?\")' class='btn btn-danger'>Delete</a>
               </th>";
         echo "</tr>";
         // Modal structure for View/Edit

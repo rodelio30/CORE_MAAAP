@@ -92,16 +92,16 @@ if ($result_guide->num_rows > 0) {
     </div>
 
     <!-- About Section -->
-    <section id="about-company" class="about section" style="background-color: #f5f5f5;">
+    <section id="about-company" class="about section new-bg">
 
       <div class="container">
          <!-- End Section Title -->
       <div class="container section-title">
-        <h2>About</h2>
+        <h2 style="color: white;">About</h2>
       </div>
         <div class="row gy-5">
 
-          <div class="col-xl-5 content">
+          <div class="col-md-5 content">
               <div class="address-content">
 
           <?php if ($core_guide): ?>
@@ -134,7 +134,7 @@ if ($result_guide->num_rows > 0) {
             </div>
           </div>
 
-          <div class="col-xl-3">
+          <div class="col-md-3">
             <div class="row gy-4 icon-boxes">
 
 
@@ -150,7 +150,7 @@ if ($result_guide->num_rows > 0) {
             <?php endforeach; ?>
             </div>
           </div>
-          <div class="col-xl-4">
+          <div class="col-md-4">
             <div class="row gy-4 icon-boxes">
               <div class="col-md-12">
                 <div class="icon-box">

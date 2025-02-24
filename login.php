@@ -30,7 +30,7 @@ if (isset($_POST["submit_admin"])) {
           $_SESSION["profile_pic"] = $row["profile_pic"];
 
           sleep(1);
-          header("Location: superadmin/explore.php");
+          header("Location: superadmin/index.php");
           exit;
       } else {
           echo "<script> alert('Wrong Password'); </script>";
@@ -129,11 +129,11 @@ if (isset($_POST["submit_admin"])) {
     </div>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+    <section id="hero" class="section new-bg">
       <div class="container">
-          <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+          <div class="d-flex justify-content-center align-items-center" style="height: 90vh;">
           <div class="login-container text-center">
-            <form action="" method="post" style="padding: 2rem; border-radius: 15px; border: 2px solid #2e5a31;">
+            <form action="" method="post" style="padding: 2rem; border-radius: 15px; border: 2px solid #2e5a31; background-color:white;">
               <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">Username</span>
                 <input type="text" class="form-control" name="username" aria-describedby="addon-wrapping" style="border-color: #2e5a31 !important;" required autofocus>

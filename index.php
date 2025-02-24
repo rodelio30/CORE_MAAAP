@@ -134,14 +134,15 @@ if (isset($_POST["submit_feedback"])) {
       </h1>
     </div>
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-      <div class="container">
+    <!-- <section id="hero" class="hero section dark-background"> -->
+    <section id="hero" class="section new-bg">
+      <div class="container" style="height: 90vh;">
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center align-items-center">
           <!-- <div class="sign-up-form text-center"> -->
             <form>
               <div class="search-input text-center">
-                <small style="color: red;" class="text-center m-0 mt-2 p-0">** Search for Room or Teacher’s Name **</small>
+                <small style="color: white;" class="text-center m-0 mt-2 p-0">** Search for Room or Teacher’s Name **</small>
                 <input id="searchInput" class="form-control" type="text" placeholder="Search here . . ." aria-label="Search" onkeyup="searchRoom()" autofocus>
               </div>
               <div id="roomList" class="pt-2">

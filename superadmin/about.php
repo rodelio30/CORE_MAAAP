@@ -92,7 +92,7 @@ if ($result_guide->num_rows > 0) {
     </div>
 
     <!-- About Section -->
-    <section id="about-company" class="about section" style="background-color: #f5f5f5;">
+    <section id="about-company" class="about section new-bg">
 
       <div class="container">
           <!-- End Section Title -->
@@ -100,8 +100,8 @@ if ($result_guide->num_rows > 0) {
           <h2>About</h2>
         </div>
 
-        <p class="m-0" style="color:rgb(232, 108, 108);">
-  -- Click the description to edit or update it. --
+        <p class="m-0" style="color:rgb(227, 248, 226);">
+  -- Click the title or description to edit or update it. --
 </p>
         <div class="row gy-5">
 
@@ -109,7 +109,13 @@ if ($result_guide->num_rows > 0) {
         <div class="address-content">
             <?php if ($core_guide): ?>
                 <div class="core-guide-section">
-                    <h2><?php echo htmlspecialchars($core_guide['about_title']); ?></h2>
+                    <h2 
+                        class="editable-title" 
+                        contenteditable="true" 
+                        data-id="<?php echo $core_guide['about_id']; ?>" 
+                        data-field="about_title">
+                        <?php echo htmlspecialchars($core_guide['about_title']); ?>
+                    </h2>
                     <p 
                         class="editable" 
                         contenteditable="true" 
@@ -131,7 +137,14 @@ if ($result_guide->num_rows > 0) {
                         <div class="address-content">
                             <div class="info-item">
                                 <i class="<?php echo $section['about_icon']; ?>"></i>
-                                <h3><?php echo htmlspecialchars($section['about_title']); ?></h3>
+                                <!-- <h3><?php echo htmlspecialchars($section['about_title']); ?></h3> -->
+                            <h3 
+    class="editable-title" 
+    contenteditable="true" 
+    data-id="<?php echo $section['about_id']; ?>" 
+    data-field="about_title">
+    <?php echo htmlspecialchars($section['about_title']); ?>
+</h3>
                                 <p 
                                     class="editable" 
                                     contenteditable="true" 
@@ -153,7 +166,14 @@ if ($result_guide->num_rows > 0) {
                 <?php if (in_array($section['about_title'], ['Vision', 'Mission'])): ?>
                     <div class="col-md-12">
                         <div class="icon-box">
-                            <h3><?php echo htmlspecialchars($section['about_title']); ?></h3>
+                            <!-- <h3><?php echo htmlspecialchars($section['about_title']); ?></h3> -->
+                            <h3 
+    class="editable-title" 
+    contenteditable="true" 
+    data-id="<?php echo $section['about_id']; ?>" 
+    data-field="about_title">
+    <?php echo htmlspecialchars($section['about_title']); ?>
+</h3>
                             <p 
                                 class="editable" 
                                 contenteditable="true" 
@@ -175,8 +195,24 @@ if ($result_guide->num_rows > 0) {
                     <h3>Core Values</h3>
                     <?php foreach ($core_values as $value): ?>
                         <div class="card p-2 mb-2">
-                            <h5 class="mb-0"><?php echo htmlspecialchars($value['core_title']); ?></h5>
-                            <p><b><?php echo htmlspecialchars($value['subtitle']); ?></b></p>
+                            <!-- <h5 class="mb-0"><?php echo htmlspecialchars($value['core_title']); ?></h5> -->
+                            <h5 
+    class="editable-title" 
+    contenteditable="true" 
+    data-id="<?php echo $value['core_id']; ?>" 
+    data-field="core_title">
+    <?php echo htmlspecialchars($value['core_title']); ?>
+</h5>
+                            <!-- <p><b><?php echo htmlspecialchars($value['subtitle']); ?></b></p> -->
+                            <p>
+    <b 
+        class="editable-title" 
+        contenteditable="true" 
+        data-id="<?php echo $value['core_id']; ?>" 
+        data-field="subtitle">
+        <?php echo htmlspecialchars($value['subtitle']); ?>
+    </b>
+</p>
                             <p 
                                 class="editable" 
                                 contenteditable="true" 
@@ -265,7 +301,9 @@ if ($result_guide->num_rows > 0) {
 </script> -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const editableElements = document.querySelectorAll('.editable');
+    // const editableElements = document.querySelectorAll('.editable');
+    const editableElements = document.querySelectorAll('.editable, .editable-title');
+
 
     editableElements.forEach(element => {
         element.addEventListener('blur', () => {

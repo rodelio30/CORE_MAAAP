@@ -38,8 +38,6 @@ if (!empty($_SESSION['user_id'])) {
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/custom.css" rel="stylesheet">
   <link href="assets/css/lightgallery.css" rel="stylesheet" />
-
-
   <style>
         .model-gallery {
             display: flex;
@@ -85,10 +83,11 @@ if (!empty($_SESSION['user_id'])) {
   
     
     <!-- Explore Section -->
+    <!-- <section id="explore" class="services section light-background"> -->
     <section id="explore" class="services section light-background">
       <!-- Section Title -->
       <div class="container section-title">
-        <h2>Explore Maps</h2>
+        <h2>3D Maps</h2>
       </div>
       <!-- End Section Title -->
       <div class="container">
@@ -155,7 +154,7 @@ if (!empty($_SESSION['user_id'])) {
         modelViewer.setAttribute('ar', '');
         modelViewer.setAttribute('ar-modes', 'scene-viewer webxr');
         modelViewer.setAttribute('alt', 'A 3D model');
-        modelViewer.setAttribute('style', 'width: 100%; height: 650px;');
+        modelViewer.setAttribute('style', 'width: 100%; height: 650px; top: -100px;');
 
         // **Default Camera Position (Back View)**
     const defaultOrbit = '175deg 87deg 2.5m';

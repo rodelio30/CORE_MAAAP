@@ -157,6 +157,7 @@ $total_ratings = $data['total_ratings'];
   font-size: 1rem;
   width: 20px;
   text-align: center;
+  color: white;
 }
 
 .bar {
@@ -177,6 +178,7 @@ $total_ratings = $data['total_ratings'];
 .count {
   width: 30px;
   text-align: right;
+  color: white;
 }
 
   </style>
@@ -200,10 +202,11 @@ $total_ratings = $data['total_ratings'];
       </h1>
     </div>
     <!-- Explore Section -->
-    <section class="services section light-background">
+    <!-- <section class="services section light-background"> -->
+    <section id="feedback" class="contact section new-bg">
     <!-- Section Title -->
       <div class="container section-title">
-        <h2>Feedback</h2>
+        <h2 style="color: white;">Feedback</h2>
         <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
       </div><!-- End Section Title -->
 
@@ -213,7 +216,7 @@ $total_ratings = $data['total_ratings'];
 
           <div class="col-md-6">
 
-              <form action="feedback_admin.php" method="POST" class="php-email-form">
+            <form action="feedback_admin.php" method="POST" style="background-color: #f5f5f5; padding: 2rem; ">
           <p class="text-center">-- Help improve the Core Guide! --</p>
               <div class="row gy-4">
                 <div class="col-md-12">
@@ -251,7 +254,7 @@ $total_ratings = $data['total_ratings'];
           <div class="rating-summary">
             <!-- Average Rating -->
             <div class="average-rating">
-              <h1><?php echo $avg_rating; ?></h1>
+              <h1 style="color: white;"><?php echo $avg_rating; ?></h1>
               <div class="stars">
                 <?php
                 $full_stars = floor($avg_rating);
@@ -294,7 +297,7 @@ $total_ratings = $data['total_ratings'];
             </div>
           </div> 
 
-          <div class="feedback-list">
+          <div class="feedback-list" style="overflow-y: auto; height: 500px; padding: 0 1rem;">
   <?php
   // Fetch feedback from the database
   $sql = "SELECT name, message, rating, created_at FROM feedback ORDER BY created_at DESC";

@@ -156,7 +156,8 @@ $result = $conn->query($sql);
       </h1>
     </div>
     <!-- Explore Section -->
-    <section class="services section light-background">
+    <!-- <section class="services section light-background"> -->
+    <section  class="about section new-bg">
       <!-- Section Title -->
       <div class="container" data-aos="fade-up">
      
@@ -165,7 +166,7 @@ $result = $conn->query($sql);
             <div class="col-md-4">
             </div>
             <div class="col-md-4 text-center">
-              <h1>
+              <h1 style="color: white;">
                 <b>
                   ROOM SCHEDULE
                 </b>

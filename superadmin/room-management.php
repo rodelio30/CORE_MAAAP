@@ -153,7 +153,8 @@ if (isset($_POST["submit_room"])) {
       </h1>
     </div>
     <!-- Explore Section -->
-    <section class="services section light-background">
+    <!-- <section class="services section light-background"> -->
+    <section  class="about section new-bg">
       <!-- Section Title -->
       <div class="container">
        <!-- Button trigger modal -->
@@ -164,7 +165,7 @@ if (isset($_POST["submit_room"])) {
                   </button>
               </div>
               <div class="col-md-5 text-left">
-                  <h1>
+                  <h1 style="color: white;">
                     <b>
                       ROOM MANAGEMENT
                     </b>
