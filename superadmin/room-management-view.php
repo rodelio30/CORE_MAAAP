@@ -139,9 +139,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <!-- Explore Section -->
     <!-- <section class="services section light-background"> -->
-    <section  class="about section new-bg">
+      <section  class="about section new-bg pb-2">
       <!-- Section Title -->
-      <div class="container">
+      <div class="container" style="min-height: 80vh; max-height: 80vh; overflow-y: auto;scrollbar-width: none;">
+        
       <!-- Button trigger modal -->
     <div class="row pt-3">
         <div class="col-md-4">

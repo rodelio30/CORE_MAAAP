@@ -85,7 +85,7 @@ if (isset($_POST["submit_navita"])) {
 
       <!-- <img src="../assets/img/hero-bg.jpg" alt="" data-aos="fade-in"> -->
 
-      <div class="container" style="height: 90vh;">
+      <div class="container" style="height: 85vh;">
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center align-items-center">
             <form>
@@ -126,8 +126,9 @@ if (isset($_POST["submit_navita"])) {
 
 
 <!-- About Section -->
-<section id="about" class="about section new-bg" style="display: none;">
-  <div class="container">
+<section id="about" class="about section new-bg pb-2" style="display: none;">
+  <!-- <div class="container"> -->
+      <div class="container" style="height: 85vh; overflow-y: auto;scrollbar-width: none;">
     <div class="row align-items-xl-center gy-1">
       <h5 class="text-center" style="padding:0; margin: 0; font-weight: 400; color: white;" >
         <strong>

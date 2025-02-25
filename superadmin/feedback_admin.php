@@ -203,7 +203,7 @@ $total_ratings = $data['total_ratings'];
     </div>
     <!-- Explore Section -->
     <!-- <section class="services section light-background"> -->
-    <section id="feedback" class="contact section new-bg">
+    <section id="feedback" class="contact section new-bg pb-2">
     <!-- Section Title -->
       <div class="container section-title">
         <h2 style="color: white;">Feedback</h2>
@@ -344,8 +344,6 @@ $total_ratings = $data['total_ratings'];
         </div>
 
       </div>
-       <br>
-       <br>
        <br>
 
     </section><!-- /Contact Section -->

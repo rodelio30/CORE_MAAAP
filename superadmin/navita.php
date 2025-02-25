@@ -163,9 +163,10 @@ if (isset($_GET['reject_id'])) {
     </div>
     <!-- Explore Section -->
     <!-- <section class="services section light-background"> -->
-    <section class="about section new-bg">
+    <section class="about section new-bg pb-2">
       <!-- Section Title -->
-      <div class="container" data-aos="fade-up">
+      <div class="container" style="height: 80vh; overflow-y: auto;scrollbar-width: none;">
+        
       <div class="row pt-3">
       <div class="col-md-4">
         <button type="button" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: white;">

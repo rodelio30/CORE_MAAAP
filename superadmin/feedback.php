@@ -198,9 +198,9 @@ if (isset($_POST['delete_selected'])) {
     </div>
     <!-- Explore Section -->
     <!-- <section class="services section light-background"> -->
-    <section id="feedback" class="contact section new-bg">
+      <section id="feedback" class="about section new-bg pb-2">
       <!-- Section Title -->
-      <div class="container" data-aos="fade-up">
+      <div class="container" style="height: 80vh; overflow-y: auto;scrollbar-width: none;">
       <div class="row pt-3">
       <div class="col-md-4">
       </div>
