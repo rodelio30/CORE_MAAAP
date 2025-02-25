@@ -13,7 +13,7 @@ $github_base_url = "https://raw.githubusercontent.com/rodelio30/CORE_MAAAP/main/
 
 // List of models manually (GitHub does not allow directory listing)
 $models = [
-    ["name" => "CORE_Campus", "url" => $github_base_url . "CORE_Campus.glb"],
+    ["url" => $github_base_url . "Core Final 3D v3.glb"],
     // Add more models if needed
 ];
 

@@ -43,13 +43,25 @@ if (!empty($_SESSION['user_id'])) {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            color: white;
         }
-        .model-container {
-            /* border: 1px solid #ccc; */
-            /* padding: 10px; */
+        /* .model-container {
             text-align: center;
             width: 100%;
-        }
+        } */
+  .model-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden; /* Hide parts outside this box */
+    position: relative;
+}
+
+model-viewer {
+    width: 100%;
+    height: 650px; /* Increase height to "push" unwanted parts out */
+    position: absolute;
+    top: -100px; /* Move model up to crop top */
+}
         .delete-btn {
             margin-top: 10px;
             background-color: red;
@@ -84,10 +96,10 @@ if (!empty($_SESSION['user_id'])) {
     
     <!-- Explore Section -->
     <!-- <section id="explore" class="services section light-background"> -->
-    <section id="explore" class="services section light-background">
+    <section id="explore" class="services section new-bg">
       <!-- Section Title -->
       <div class="container section-title">
-        <h2>3D Maps</h2>
+        <h2 style="color: white;">3D Maps</h2>
       </div>
       <!-- End Section Title -->
       <div class="container">
@@ -154,7 +166,7 @@ if (!empty($_SESSION['user_id'])) {
         modelViewer.setAttribute('ar', '');
         modelViewer.setAttribute('ar-modes', 'scene-viewer webxr');
         modelViewer.setAttribute('alt', 'A 3D model');
-        modelViewer.setAttribute('style', 'width: 100%; height: 650px; top: -100px;');
+        // modelViewer.setAttribute('style', 'width: 100%; height: 650px; top: -100px;');
 
         // **Default Camera Position (Back View)**
     const defaultOrbit = '175deg 87deg 2.5m';

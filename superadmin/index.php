@@ -90,7 +90,7 @@ if (isset($_POST["submit_navita"])) {
           <div class="col-lg-12 d-flex justify-content-center align-items-center">
             <form>
               <div class="search-input text-center">
-                <small style="color: red;" class="text-center m-0 mt-2 p-0">** Search for Room or Teacher’s Name **</small>
+                <small style="color: white;" class="text-center m-0 mt-2 p-0">** Search for Room or Teacher’s Name **</small>
                 <input id="searchInput" class="form-control" type="text" placeholder="Search here . . ." aria-label="Search" onkeyup="searchRoom()" autofocus>
               </div>
               <div id="roomList" class="pt-2">
@@ -126,16 +126,16 @@ if (isset($_POST["submit_navita"])) {
 
 
 <!-- About Section -->
-<section id="about" class="about section light-background" style="display: none;">
+<section id="about" class="about section new-bg" style="display: none;">
   <div class="container">
     <div class="row align-items-xl-center gy-1">
-      <h5 class="text-center" style="padding:0; margin: 0; font-weight: 400;" >
+      <h5 class="text-center" style="padding:0; margin: 0; font-weight: 400; color: white;" >
         <strong>
         Room Details
         </strong>
       </h5>
-      <p id="roomDetails" class="text-center"></p>
-      <small style="color: red;" class="text-center m-0 mt-2 p-0">** Click the image to view **</small>
+      <p id="roomDetails" class="text-center" style="color: white;"></p>
+      <small style="color: white;" class="text-center m-0 mt-2 p-0">** Click the image to view **</small>
       <!-- <div id="roomImages" class="d-flex justify-content-center flex-wrap lightgallery"> -->
       <div id="roomImages" class="d-flex justify-content-center flex-wrap lightgallery" style="width: 60%; margin: 0 auto;">
         <!-- Images for LightGallery will be dynamically injected here -->
@@ -150,17 +150,17 @@ if (isset($_POST["submit_navita"])) {
   </div>
 </section>
 <!-- Employee Details Section -->
-<section id="employeeSection" class="about section light-background pt-3" style="display: none;">
-<div class="container">
+<section id="employeeSection" class="about section new-bg pt-3" style="display: none;">
+<div class="container" style="min-height: 70vh;">
     <!-- Employee Details Section -->
     <div class="row align-items-center justify-content-center mb-4">
-      <h3 class="text-center"><strong>Employee Details</strong></h3>
+      <h3 class="text-center" style="color: white;"><strong>Employee Details</strong></h3>
     </div>
     <div class="row align-items-center justify-content-center">
       <div class="col-md-8 text-center">
-        <h4><i class="bi bi-person-circle"></i> <strong>Name:</strong> <span id="employeeName"></span></h4>
-        <h5><i class="bi bi-building"></i> <strong>Department:</strong> <span id="employeeDepartment"></span></h5>
-        <h5><i class="bi bi-person-badge"></i> <strong>Position:</strong> <span id="employeePosition"></span></h5>
+        <h4 style="color: white;"><i class="bi bi-person-circle"></i> <strong>Name:</strong> <span id="employeeName"></span></h4>
+        <h5 style="color: white;"><i class="bi bi-building"></i> <strong>Department:</strong> <span id="employeeDepartment"></span></h5>
+        <h5 style="color: white;"><i class="bi bi-person-badge"></i> <strong>Position:</strong> <span id="employeePosition"></span></h5>
       </div>
     </div>
 
@@ -313,7 +313,7 @@ function fetchEmployeeDetails(employeeId) {
 for (const [shortDay, fullDay] of Object.entries(dayMapping)) {
     if (data.schedule[shortDay] && data.schedule[shortDay].length > 0) {
         scheduleHTML += `
-            <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${shortDay}" aria-expanded="false">
+            <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${shortDay}" aria-expanded="false">
                 ${fullDay}
             </button>`;
     }
@@ -409,7 +409,7 @@ function updateRealTimeSchedule(filteredSchedules) {
 
   if (filteredSchedules.length > 0) {
     realTimeSection.innerHTML = `
-      <h6 class="mt-3"><strong>Real-Time Schedule:</strong></h6>
+      <h6 class="mt-3" style="color: white;"><strong>Real-Time Schedule:</strong></h6>
       ${filteredSchedules.map(schedule => `
       
 <div class="row">

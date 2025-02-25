@@ -18,7 +18,7 @@ try {
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             $details = [
-                "<h6 class='mb-0'>Room Name/Number" => htmlspecialchars($row['room_name']),
+                "<h6 class='mb-0' style='color: white'>Room Name/Number" => htmlspecialchars($row['room_name']),
                 "</h6>Building" => htmlspecialchars($row['description']),
                 "Floor" => htmlspecialchars($row['other_description'])
             ];
